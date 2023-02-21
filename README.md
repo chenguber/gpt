@@ -31,6 +31,7 @@ multi-dimentional data object.
  - compare with convolution nn, it preseved the `space` info, filter is sequencial moved through the `space`, and result is put back to the `same space`.
    Attention has no `space` info, have to manually encode the position info.
  - attention is within the `batch`, no cross the batches.
+ - in the `encoder` block, all nodes `communicate` to each other; in `decoder` block, node will not talk to `future`. 
  - each token has an embedding, it `combines` token self-embedding + position embedding. [B, T, C].
  - key: `what do I have`. Computed via key-head([C, head_size]) applied to token embedding, [B, T, C] => [B, T, head_size]
  - query: `what am I looking for`. Computed via query-head([C, head_size]) applied to token embedding, [B, T, C] => [B, T, head_size]
