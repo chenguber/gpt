@@ -38,6 +38,9 @@ multi-dimentional data object.
  - weight: query @ key, [B, T, head_size]@[B, head_size, T].transpose(-2, -1) => [B, T, T]. 
  - value: 
 
+# self-attention vs cross-attention
+ - self-attention: **same source** are used to compute key or query or value.
+ - cross-attention: **different sources** are used to compute key or query or value.
 
 # References
 - nanoGPT: https://github.com/karpathy/nanoGPT
